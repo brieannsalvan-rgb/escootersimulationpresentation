@@ -1,0 +1,187 @@
+/* =====================================================================
+   presentation.css - looks of presentation.html (video slides)
+   The slides are drawn on a fixed 1280 x 720 "stage" that is scaled to
+   fit any window, so the video looks the same on every screen.
+   ===================================================================== */
+
+:root {
+  --bg: #0b1220;
+  --panel: #1e293b;
+  --panel-2: #273449;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #22d3ee;
+  --green: #4ade80;
+  --orange: #fb923c;
+  --red: #f87171;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  display: flex; flex-direction: column;
+  background: var(--bg); color: var(--text);
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* ---------- Top bar: part name, timer ---------- */
+#topbar {
+  height: 44px; flex: none; display: flex; align-items: center; gap: 16px;
+  padding: 0 16px; background: #0f172a; border-bottom: 1px solid var(--panel-2);
+  font-size: 14px;
+}
+#topbar .part { color: var(--accent); font-weight: 700; }
+#topbar .when { color: var(--muted); }
+#topbar .spacer { flex: 1; }
+#timer { font-family: Consolas, monospace; font-weight: 700; padding: 3px 10px;
+         border-radius: 6px; background: var(--panel); }
+#timer.ok { color: var(--green); }
+#timer.over { color: var(--red); }
+#progress { height: 3px; background: var(--accent); width: 0; transition: width .2s; }
+
+/* ---------- Stage ---------- */
+#area { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
+#wrap { position: relative; }
+#stage {
+  position: absolute; left: 0; top: 0; width: 1280px; height: 720px;
+  transform-origin: top left; background: var(--bg);
+  border-radius: 8px; overflow: hidden;
+}
+.slide {
+  position: absolute; inset: 0; padding: 40px 64px 36px;
+  display: none; flex-direction: column;
+}
+.slide.active { display: flex; }
+.slide h1 { font-size: 60px; margin: 0 0 12px; color: var(--accent); line-height: 1.1; }
+.slide h2 { font-size: 42px; margin: 0 0 22px; color: var(--accent); }
+.slide h3 { font-size: 26px; margin: 0 0 10px; color: var(--text); }
+.slide p, .slide li { font-size: 28px; line-height: 1.45; }
+.slide ul { margin: 0; padding-left: 34px; }
+.slide li { margin-bottom: 12px; }
+.sub { color: var(--muted); font-size: 24px !important; }
+.small { font-size: 20px !important; color: var(--muted); }
+.center { align-items: center; justify-content: center; text-align: center; }
+.row { display: flex; gap: 32px; flex: 1; min-height: 0; }
+.col { flex: 1; min-width: 0; }
+
+.slide aside.notes { display: none; }   /* notes are shown in the N panel, not on the slide */
+
+.tag { position: absolute; right: 40px; top: 30px; font-size: 18px; color: var(--muted); }
+
+/* ---------- Equation cards ---------- */
+.eq {
+  font-family: Consolas, "Cambria Math", monospace; font-size: 64px; font-weight: 700;
+  text-align: center; background: var(--panel); border-radius: 16px;
+  padding: 26px 20px; margin: 10px 0 24px; color: var(--accent);
+}
+.eq.green { color: var(--green); }
+.eq.orange { color: var(--orange); }
+.vars { font-size: 26px; }
+.vars td { padding: 4px 18px 4px 0; vertical-align: top; }
+.vars td:first-child { font-family: Consolas, monospace; color: var(--accent); white-space: nowrap; }
+
+/* ---------- Tables ---------- */
+table.data { border-collapse: collapse; width: 100%; font-size: 24px; }
+table.data th { text-align: left; color: var(--muted); font-size: 18px; padding: 8px 10px;
+                border-bottom: 2px solid var(--panel-2); }
+table.data td { padding: 10px; border-bottom: 1px solid var(--panel-2); font-family: Consolas, monospace; }
+table.data td.txt { font-family: inherit; }
+.ok { color: var(--green); }
+.bad { color: var(--red); }
+.o { color: var(--orange); }
+.g { color: var(--green); }
+.c { color: var(--accent); }
+
+/* ---------- Cards / chips ---------- */
+.cards { display: flex; gap: 22px; }
+.card { flex: 1; background: var(--panel); border-radius: 14px; padding: 20px 24px; }
+.card p, .card li { font-size: 24px; }
+.card .big { font-size: 40px; font-weight: 700; margin: 0 0 6px; }
+.steps { font-family: Consolas, monospace; font-size: 26px; line-height: 1.6;
+         background: var(--panel); border-radius: 14px; padding: 22px 28px; white-space: pre-wrap; }
+
+/* ---------- Code on slides and in the viewer ---------- */
+pre.code, #vBody {
+  font-family: Consolas, "Courier New", monospace; background: #0f172a;
+  color: #e2e8f0; border-radius: 12px; margin: 0; overflow: auto; tab-size: 2;
+}
+pre.code { font-size: 21px; line-height: 1.45; padding: 18px 22px; flex: 1; min-height: 0; }
+/* ---------- Equation <-> code pairs (slide 9) ---------- */
+.pairs { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.pair { flex: 1; min-height: 0; display: flex; align-items: stretch; gap: 14px; }
+.pair-eq { flex: 0 0 430px; background: var(--panel); border-radius: 12px; padding: 12px 20px;
+           display: flex; flex-direction: column; justify-content: center; }
+.pair-name { font-size: 18px; color: var(--muted); }
+.pair-formula { font-family: Consolas, "Cambria Math", monospace; font-size: 40px; font-weight: 700; line-height: 1.2; }
+.pair-map { font-size: 17px; color: var(--muted); line-height: 1.45; }
+.pair-map b { color: var(--text); font-family: Consolas, monospace; font-weight: 600; }
+.pair-arrow { align-self: center; font-size: 36px; color: var(--muted); }
+pre.pair-code { flex: 1; display: block; overflow: hidden;
+                font-size: 20px; line-height: 1.5; padding: 24px 18px; }
+
+.tk-c { color: #7f8ea3; font-style: italic; }
+.tk-s { color: #a5e8a0; }
+.tk-n { color: #fdba74; }
+.tk-k { color: #67e8f9; }
+.codebar { display: flex; gap: 12px; align-items: center; margin-top: 12px; flex: none; }
+.codebar .src { color: var(--muted); font-size: 18px; }
+
+/* ---------- Demo frame ---------- */
+#demoFrame { flex: 1; min-height: 0; width: 100%; border: 2px solid var(--panel-2);
+             border-radius: 12px; background: #0f172a; }
+
+/* ---------- Buttons ---------- */
+button, .btn {
+  cursor: pointer; border: none; border-radius: 8px; padding: 8px 14px;
+  font-size: 15px; font-weight: 600; font-family: inherit;
+  background: var(--panel-2); color: var(--text); text-decoration: none;
+}
+button:hover, .btn:hover { background: #34455f; }
+button.primary { background: var(--accent); color: #062a33; }
+.slide button { font-size: 18px; padding: 8px 16px; }
+
+/* ---------- Editable fill-ins (name, section) ---------- */
+.fill { color: var(--orange); border-bottom: 2px dashed var(--orange); padding: 0 6px;
+        outline: none; min-width: 120px; display: inline-block; }
+.fill:focus { background: rgba(251,146,60,.15); }
+
+/* ---------- Bottom controls ---------- */
+#controls {
+  height: 52px; flex: none; display: flex; align-items: center; justify-content: center;
+  gap: 10px; background: #0f172a; border-top: 1px solid var(--panel-2);
+}
+#counter { color: var(--muted); font-size: 14px; min-width: 70px; text-align: center; }
+
+/* ---------- Speaker notes (hidden while recording) ---------- */
+#notes {
+  display: none; position: fixed; left: 50%; bottom: 62px; transform: translateX(-50%);
+  width: min(900px, 94vw); max-height: 40vh; overflow: auto; z-index: 20;
+  background: #fff7e6; color: #1f2937; border-radius: 12px; padding: 14px 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.5); font-size: 16px; line-height: 1.5;
+}
+#notes.show { display: block; }
+#notes h4 { margin: 0 0 6px; font-size: 14px; letter-spacing: .05em; color: #9a3412; }
+#notes ul { margin: 0; padding-left: 20px; }
+
+/* ---------- Full source viewer ---------- */
+#viewer {
+  display: none; position: fixed; inset: 3vh 3vw; z-index: 30; flex-direction: column;
+  background: #0f172a; border: 2px solid var(--accent); border-radius: 14px;
+  box-shadow: 0 10px 50px rgba(0,0,0,.7);
+}
+#viewer.show { display: flex; }
+#vHead { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 10px 14px;
+         border-bottom: 1px solid var(--panel-2); }
+#vHead .title { font-weight: 700; color: var(--accent); margin-right: 8px; }
+#vHead .mode { color: var(--muted); font-size: 13px; flex: 1; }
+#vHead button.tab.active { background: var(--accent); color: #062a33; }
+#vHead select { background: var(--panel-2); color: var(--text); border: none;
+                border-radius: 8px; padding: 8px; font-size: 14px; max-width: 320px; }
+#vBody { flex: 1; min-height: 0; font-size: 15px; line-height: 1.5; border-radius: 0 0 12px 12px; padding: 8px 0; }
+#vBody .ln { display: flex; white-space: pre; }
+#vBody .n { flex: none; width: 56px; text-align: right; padding-right: 14px; color: #475569;
+            user-select: none; }
+#vBody .t { flex: 1; padding-right: 20px; }
+#vBody .ln.flash { background: rgba(34,211,238,.25); }
+
+@media print { #topbar, #controls, #notes, #viewer { display: none !important; } }

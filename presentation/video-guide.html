@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--
+=====================================================================
+  PHASE 2 VIDEO GUIDE - E-Scooter Smart Wheel Analyzer
+  A separate instruction page. It only explains how to make the
+  5-8 minute video; it does not change the program.
+
+  PDF ref: all content here follows "PT 1 GEN SCI.pdf":
+    p.7  "Phase 2 Video Presentation" (table "Required content and
+         suggested timing", "Presentation requirements" items 1-8,
+         "Phase 2 deliverable")
+    p.8  "Submission procedure" (file names), "Responsible use of AI",
+         "Final check before submitting"
+    p.10 "Phase 2 Video Presentation Rubric" (what earns the points)
+  FILES THIS PAGE NEEDS
+    ../project/style.css   page layout, cards and colors (the analyzer's CSS)
+    guide.css              extra styles for this guide (same folder)
+=====================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Guide · E-Scooter Smart Wheel Analyzer</title>
+  <link rel="stylesheet" href="../project/style.css" />
+  <link rel="stylesheet" href="guide.css" />
+</head>
+
+<body>
+  <header>
+    <h1>🎬 How to Make Your Phase 2 Video</h1>
+    <p>Step-by-step guide for the E-Scooter Smart Wheel Analyzer · 5 to 8 minutes · due October 18, 2026</p>
+    <p><a class="back" href="../project/index.html">← Open the analyzer</a>
+       &nbsp;·&nbsp; <a class="back" href="presentation.html">▶ Open the slides</a></p>
+  </header>
+
+  <main class="layout">
+
+    <!-- ================= AT A GLANCE ================= -->
+    <section class="card full">
+      <h2>The video at a glance</h2>
+      <div class="results">
+        <div class="tile"><div class="name">Length</div><div class="value">5–8 min</div><div class="unit">including credits</div></div>
+        <div class="tile"><div class="name">Parts</div><div class="value">5</div><div class="unit">see the timeline below</div></div>
+        <div class="tile"><div class="name">Input cases to show</div><div class="value">3</div><div class="unit">with changing results</div></div>
+        <div class="tile"><div class="name">File</div><div class="value">1 × MP4</div><div class="unit">or an accessible link</div></div>
+      </div>
+      <p class="note">
+        The video must show your <strong>real program running</strong> (screen recording), and you
+        must explain it <strong>in your own words</strong>. A slide deck alone is not accepted,
+        and neither is a presentation read out by an AI voice with no personal explanation.
+        <em>(PDF p.7, "Presentation requirements" items 1 and 8.)</em>
+      </p>
+    </section>
+
+    <!-- ================= READY-MADE SLIDES ================= -->
+    <section class="card full">
+      <h2>Ready-made slides for the video</h2>
+      <p>
+        <a class="back" href="presentation.html">▶ Open presentation.html</a> has 15 slides that follow the
+        5 required parts. The real analyzer runs inside slide 7, the code slides show the actual functions
+        from <code>project/script.js</code>, and the button <strong>📄 Source code</strong> (or key <kbd>S</kbd>) opens the
+        full source code, so you do not need to open the code editor while recording.
+      </p>
+      <p class="note">
+        Keys: <kbd>→</kbd> next · <kbd>←</kbd> back · <kbd>S</kbd> source code · <kbd>C</kbd> comments on/off ·
+        <kbd>N</kbd> speaker notes (hide before recording) · <kbd>T</kbd> timer · <kbd>F</kbd> full screen.
+        Click the orange words on the first and last slides to type your own name and contribution.
+      </p>
+    </section>
+
+    <!-- ================= STEP 1: PREPARE ================= -->
+    <section class="card full">
+      <h2>Step 1 · Prepare before you press record</h2>
+      <p class="note">Ten minutes of preparation saves an hour of re-recording.</p>
+      <ol class="howto">
+        <li><strong>Know the program.</strong> Open <code>project/index.html</code> and try every control:
+            radius, unit, RPM, time, presets, the slider, the test panel and section 9.</li>
+        <li><strong>Open two windows:</strong> the analyzer in your browser, and
+            <code>script.js</code> in VS Code or Notepad. Make the text big
+            (browser zoom <kbd>Ctrl</kbd> + <kbd>+</kbd> to 125%; code font size 18 or more) so a viewer can read it.</li>
+        <li><strong>Do one manual calculation on paper first.</strong> Use Case 1
+            (r = 0.12 m, N = 600 RPM). You will show this on camera.</li>
+        <li><strong>Write short bullet points</strong> for each part (not a full script).
+            Bullet points keep you natural and in your own words.</li>
+        <li><strong>Find a quiet room.</strong> Close other tabs and apps, turn on
+            <em>Do Not Disturb</em>, and test your microphone with a 10-second recording.</li>
+      </ol>
+    </section>
+
+    <!-- ================= STEP 2: TIMELINE ================= -->
+    <section class="card full">
+      <h2>Step 2 · Follow this timeline (sample: 6 minutes)</h2>
+      <div class="wide">
+        <table>
+          <thead><tr><th>Part</th><th>Time</th><th>What the teacher is looking for</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1 Introduction</strong></td><td>0:00 – 0:30</td>
+                <td>Your name and project title; purpose, intended users, real-life application.</td></tr>
+            <tr><td><strong>2 Physics concepts</strong></td><td>0:30 – 1:45</td>
+                <td>At least three concepts, their equations, variables and SI units; assumptions.</td></tr>
+            <tr><td><strong>3 Program demonstration</strong></td><td>1:45 – 4:00</td>
+                <td>The real program running; controls explained; three input conditions with changing results and visualization.</td></tr>
+            <tr><td><strong>4 Physics and coding integration</strong></td><td>4:00 – 5:30</td>
+                <td>Readable code; where each equation is; one complete manual calculation compared with the program; the three-case validation.</td></tr>
+            <tr><td><strong>5 Conclusion and reflection</strong></td><td>5:30 – 6:00</td>
+                <td>Summary, a challenge you solved, a possible real-world use, then credits.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">You may stretch or shorten parts, but the whole video (credits included) must stay between 5 and 8 minutes.
+        <em>(PDF p.7, table "Required content and suggested timing".)</em></p>
+    </section>
+
+    <!-- ================= STEP 3: WHAT TO SAY / SHOW ================= -->
+    <section class="card full">
+      <h2>Step 3 · What to show and say in each part</h2>
+      <p class="note">The talking points are <strong>prompts</strong>, not a script. Say them in your own words.</p>
+    </section>
+
+    <section class="card">
+      <h2>Part 1 · Introduction <span class="time">0:00 – 0:30</span></h2>
+      <h3>Show on screen</h3>
+      <p>The top of the analyzer (title and wheel), or a title slide with your name.</p>
+      <h3>Talking points</h3>
+      <ul class="howto">
+        <li>Your name, grade, section, and the project title: <em>E-Scooter Smart Wheel Analyzer</em>.</li>
+        <li>Purpose: it lets Grade 11 learners enter a wheel radius and motor speed and see the
+            rotational motion of a scooter tire.</li>
+        <li>Real-life use: scooter speedometer and tire stress.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Part 2 · Physics concepts <span class="time">0:30 – 1:45</span></h2>
+      <h3>Show on screen</h3>
+      <p>The Results tiles and the <em>Model assumptions</em> section (section 8 in the analyzer).</p>
+      <h3>Talking points (say each equation and define every symbol)</h3>
+      <ul class="howto">
+        <li><strong>Angular velocity</strong> ω = 2πN / 60, in rad/s. N is RPM; 1 turn = 2π rad, 1 min = 60 s.</li>
+        <li><strong>Tangential speed</strong> v<sub>t</sub> = rω, in m/s. It is also the scooter's ground speed.</li>
+        <li><strong>Centripetal acceleration</strong> a<sub>c</sub> = rω², in m/s², pointing to the center.</li>
+        <li>Extras you can mention: period T = 60/N, angular displacement θ = ωt, arc length s = rθ.</li>
+        <li><strong>Assumptions:</strong> constant ω, rigid wheel, rolling without slipping, direct drive.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Part 3 · Program demonstration <span class="time">1:45 – 4:00</span></h2>
+      <h3>Show on screen</h3>
+      <p>The analyzer running. Use the <em>Load</em> buttons in section 9, or type the values.</p>
+      <h3>Do this in order</h3>
+      <ol class="howto">
+        <li>Point out the controls: radius with unit, RPM, time, slider, pause.</li>
+        <li><strong>Condition 1:</strong> r = 0.12 m, N = 600 RPM. Read ω, v<sub>t</sub>, a<sub>c</sub> aloud with units.</li>
+        <li><strong>Condition 2:</strong> r = 0.25 m, N = 300 RPM. Say what changed and why.</li>
+        <li><strong>Condition 3:</strong> r = 0.10 m, N = 1200 RPM. Point at the arrows and the θ–t graph.</li>
+        <li>Optional: type <em>12</em> with unit <em>cm</em> to show unit conversion, then type
+            <em>0</em> or a letter to show the invalid-input message.</li>
+      </ol>
+      <p class="note">Say the trend: doubling the RPM doubles ω and v<sub>t</sub> but makes a<sub>c</sub> four times larger.</p>
+    </section>
+
+    <section class="card">
+      <h2>Part 4 · Physics and coding <span class="time">4:00 – 5:30</span></h2>
+      <h3>Show on screen</h3>
+      <p><code>script.js</code> in your editor, then section 9 of the analyzer (Validation evidence).</p>
+      <h3>Talking points</h3>
+      <ul class="howto">
+        <li>Search the code (<kbd>Ctrl</kbd> + <kbd>F</kbd>) for <code>angularVelocity</code>,
+            <code>tangentialSpeed</code> and <code>centripetalAcceleration</code> (Section 1):
+            "this is where ω = 2πN/60 is written in code".</li>
+        <li><code>readField()</code> (Section 2): reads each input, converts the radius to meters, rejects bad values.</li>
+        <li><code>updateAll()</code> (Section 3): reads the inputs, calls <code>analyze()</code>, updates every result.</li>
+        <li><code>drawWheel()</code> (Section 4): draws the wheel and arrows, and <code>animate()</code> turns it at ω × slow factor.</li>
+        <li><strong>One complete manual calculation</strong> (Case 1), written on paper or shown from section 9:
+            <br>ω = 2π(600)/60 = 62.832 rad/s &nbsp;·&nbsp; v<sub>t</sub> = 0.12 × 62.832 = 7.540 m/s
+            &nbsp;·&nbsp; a<sub>c</sub> = 0.12 × 62.832² = 473.741 m/s². Then show the program gives the same.</li>
+        <li>Show the <strong>three-case validation table</strong> (all ✔) and say what "agree at 3 decimals" means.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Part 5 · Conclusion and reflection <span class="time">5:30 – 6:00</span></h2>
+      <h3>Show on screen</h3>
+      <p>The Credits section (section 10) or a closing slide.</p>
+      <h3>Talking points</h3>
+      <ul class="howto">
+        <li><strong>Summary:</strong> three concepts, two main inputs, live animation, validated results.</li>
+        <li><strong>A challenge and how you fixed it</strong> (be honest and specific): for example, a wheel
+            spinning at 600 RPM is too fast to see, so you added a slow-motion slider and declared it.</li>
+        <li><strong>A real-world use:</strong> checking tire and rim stress or computing scooter speed from motor RPM.</li>
+        <li>Close with credits: who did what, the equation source, and the AI assistance.</li>
+      </ul>
+    </section>
+
+    <!-- ================= STEP 4: RECORDING ================= -->
+    <section class="card full">
+      <h2>Step 4 · Record and edit (free tools on Windows)</h2>
+      <div class="wide">
+        <table>
+          <thead><tr><th>Task</th><th>Tool</th><th>How</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Record the screen + voice</strong></td>
+                <td>OBS Studio (free) or the Clipchamp screen recorder (built into Windows 11)</td>
+                <td>Choose "whole screen" and your microphone, press record, then switch between the browser and the code editor as you talk.</td></tr>
+            <tr><td><strong>Quick option</strong></td>
+                <td>Phone camera pointed at the screen</td>
+                <td>Only if nothing else works. Hold steady and check that the text is readable.</td></tr>
+            <tr><td><strong>Edit and add credits</strong></td>
+                <td>Clipchamp or any video editor</td>
+                <td>Trim mistakes, add title and credits text, optional captions. Keep any music quieter than your voice.</td></tr>
+            <tr><td><strong>Export</strong></td>
+                <td>Clipchamp / editor</td>
+                <td>Export as <strong>MP4, 1080p</strong>. Play it back from start to finish before submitting.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Xbox Game Bar (<kbd>Win</kbd> + <kbd>G</kbd>) records only one app at a time, which is awkward when you switch
+        between the browser and the code editor. OBS or Clipchamp records the whole screen.</p>
+      <h3>Tips for a clear video</h3>
+      <ul class="howto">
+        <li>Record each part separately and join them. Re-recording one part is easier than the whole video.</li>
+        <li>Pause on every equation, input value and unit for 2–3 seconds so it can be read.</li>
+        <li>Move the mouse slowly and point at what you are talking about.</li>
+        <li>Speak slowly. Captions are encouraged for accessibility.</li>
+        <li>Show your face or voice for every explanation. You are the only member, so the whole video is your explanation.</li>
+      </ul>
+    </section>
+
+    <!-- ================= STEP 5: REQUIREMENTS ================= -->
+    <section class="card full">
+      <h2>Step 5 · The 8 presentation requirements in plain words</h2>
+      <div class="wide">
+        <table>
+          <thead><tr><th>#</th><th>Requirement (PDF p.7)</th><th>How you meet it</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Show genuine footage or a screen recording of your working project</td>
+                <td>Record the real analyzer running. A slide deck alone does not count.</td></tr>
+            <tr><td>2</td><td>Accurate Physics; equations, code, values and units visible long enough to read</td>
+                <td>Zoom in, pause 2–3 seconds on each equation and result.</td></tr>
+            <tr><td>3</td><td>Explain selected code in your own words</td>
+                <td>Say what the inputs are, where the equation is in the code, and how the outputs update (Part 4).</td></tr>
+            <tr><td>4</td><td>Clear narration, logical order, readable captions or labels</td>
+                <td>Follow the 5 parts in order; add short captions for equations.</td></tr>
+            <tr><td>5</td><td>Understandable sound and images; music optional and quieter than narration</td>
+                <td>Test the microphone first; skip music if unsure.</td></tr>
+            <tr><td>6</td><td>Identify each member's contribution; every member explains</td>
+                <td>Individual project: state your own contribution clearly at the start or end.</td></tr>
+            <tr><td>7</td><td>Credit borrowed code, references, graphics, music, datasets and AI help</td>
+                <td>Use the credits template below and the Credits section of the analyzer.</td></tr>
+            <tr><td>8</td><td>Show personal understanding; an AI-generated presentation is insufficient</td>
+                <td>Use your own voice and your own words, and be able to explain every line you show.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================= STEP 6: CREDITS TEMPLATE ================= -->
+    <section class="card full">
+      <h2>Step 6 · Credits to show at the end</h2>
+      <div class="steps">SMART WHEEL ANALYZER (E-SCOOTER)
+PHYSICS CODELAB: CODE IT, SIMULATE IT, EXPLAIN IT!
+General Science · Grade 11 · Philippine International School-Qatar
+
+Developer and presenter: [Your full name], Section [ ]
+Contribution: [what you did: Physics research, coding, testing, recording, editing]
+
+Equations: PISQ Performance Task Form, "Physics Equations and Model Conditions"
+AI assistance: Claude Code (Anthropic) helped write the first version of the
+  HTML/CSS/JavaScript and code comments. I reviewed, tested and can explain the code.
+Libraries / music / images: none (browser canvas only)</div>
+      <p class="note">Edit the orange text in the Credits section of <code>index.html</code> so the program and the video match.</p>
+    </section>
+
+    <!-- ================= STEP 7: FINAL CHECKLIST ================= -->
+    <section class="card full">
+      <h2>Step 7 · Final checklist before you submit</h2>
+      <p class="note">Tick each item. Your ticks are remembered in this browser.</p>
+      <ul class="check" id="checklist">
+        <li><label><input type="checkbox" /> Video length is between 5 and 8 minutes, credits included</label></li>
+        <li><label><input type="checkbox" /> The real program is shown running (not only slides)</label></li>
+        <li><label><input type="checkbox" /> At least three concepts explained with equations, variables and SI units</label></li>
+        <li><label><input type="checkbox" /> Assumptions stated</label></li>
+        <li><label><input type="checkbox" /> Three input conditions demonstrated with changing results</label></li>
+        <li><label><input type="checkbox" /> Code shown and explained in my own words</label></li>
+        <li><label><input type="checkbox" /> One complete manual calculation compared with the program result</label></li>
+        <li><label><input type="checkbox" /> Three-case validation shown</label></li>
+        <li><label><input type="checkbox" /> Challenge, improvement and real-world use mentioned</label></li>
+        <li><label><input type="checkbox" /> Credits include my contribution, equation source and AI assistance</label></li>
+        <li><label><input type="checkbox" /> Sound is clear; equations and code are readable</label></li>
+        <li><label><input type="checkbox" /> Watched the finished video once from start to end</label></li>
+        <li><label><input type="checkbox" /> File named like <code>G11_Section_Group01_EScooterSmartWheelAnalyzer_Phase2.mp4</code></label></li>
+        <li><label><input type="checkbox" /> Link or file opens from another device or account</label></li>
+      </ul>
+      <p class="badge" id="checkSummary"></p>
+    </section>
+
+    <!-- ================= SUBMISSION ================= -->
+    <section class="card full">
+      <h2>Submitting</h2>
+      <ol class="howto">
+        <li>Upload the <strong>MP4</strong> (or share an accessible video link) through the class submission channel.</li>
+        <li>Label it with the group number and project title, for example
+            <code>G11_Section_Group01_EScooterSmartWheelAnalyzer_Phase2.mp4</code>.</li>
+        <li>Put your name in the submission comment and in the video credits.</li>
+        <li>Keep a backup copy. No separate script, slides or report is required.</li>
+      </ol>
+      <p class="note">Video due <strong>October 18, 2026</strong>. Phase 1 (the program) is due October 15, 2026.
+        <em>(PDF p.1, section IX; p.7, "Phase 2 deliverable"; p.8, "Submission procedure".)</em></p>
+    </section>
+  </main>
+
+  <footer>Phase 2 video guide · E-Scooter Smart Wheel Analyzer · <a class="back" href="../project/index.html">Open the analyzer</a></footer>
+
+  <script>
+    /* Remembers the ticked boxes of the final checklist in this browser.
+       Browser storage can be blocked, so every access is in try/catch and
+       the page works without it. */
+    (function () {
+      const boxes = document.querySelectorAll("#checklist input[type=checkbox]");
+      const KEY = "videoGuideChecklist";
+      let saved = [];
+      try { saved = JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) {}
+
+      function summary() {
+        const done = Array.from(boxes).filter(b => b.checked).length;
+        const el = document.getElementById("checkSummary");
+        el.textContent = `${done} of ${boxes.length} done` + (done === boxes.length ? " - ready to submit! ✔" : "");
+        el.className = "badge " + (done === boxes.length ? "ok" : "");
+        try { localStorage.setItem(KEY, JSON.stringify(Array.from(boxes).map(b => b.checked))); } catch (e) {}
+      }
+
+      boxes.forEach((b, i) => { b.checked = !!saved[i]; b.addEventListener("change", summary); });
+      summary();
+    })();
+  </script>
+</body>
+</html>

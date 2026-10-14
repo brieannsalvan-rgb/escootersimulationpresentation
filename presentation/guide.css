@@ -1,0 +1,21 @@
+/* =====================================================================
+   guide.css - extra styles for video-guide.html only.
+   video-guide.html also uses the analyzer's ../project/style.css for the
+   page layout, cards and colors; this file adds what the guide needs.
+   ===================================================================== */
+
+a.back { color: var(--accent); text-decoration: none; font-weight: 600; }
+a.back:hover { text-decoration: underline; }
+.time { float: right; font-size: .8rem; font-weight: 600; color: var(--muted); }
+
+code { font-family: Consolas, monospace; background: var(--panel-2);
+       padding: 1px 6px; border-radius: 5px; color: var(--accent); font-size: .9em; }
+kbd { font-family: Consolas, monospace; background: var(--panel-2);
+      border: 1px solid #475569; border-bottom-width: 2px;
+      padding: 0 6px; border-radius: 5px; font-size: .85em; }
+
+/* Final checklist with tick boxes */
+.check { list-style: none; margin: 0; padding: 0; }
+.check li { padding: 6px 0; border-bottom: 1px solid var(--panel-2); }
+.check label { display: flex; gap: 10px; align-items: flex-start; margin: 0; font-weight: 400; cursor: pointer; }
+.check input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--accent); }
